@@ -156,6 +156,9 @@ jobs:
           echo "EDGEONE_PAGES=1" >> "$GITHUB_ENV"
           echo "NODE_ENV=production" >> "$GITHUB_ENV"
 
+      - name: Initialize Turso Database
+        run: pnpm init:turso
+
       - name: Build for EdgeOne
         run: pnpm run build:edgeone
 
